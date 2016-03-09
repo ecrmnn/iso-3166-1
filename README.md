@@ -27,7 +27,7 @@ console.log(iso.whereAlpha2('no'));
 */
 ```
 
-Get country by ISO 3166-1 Alpha 3
+Get country by ISO 3166-1 Alpha-3
 ```javascript
 const iso = require('iso-3166-1');
 

@@ -6,6 +6,10 @@
   "scripts": {
     "test": "node_modules/.bin/mocha tests/tests.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecrmnn/iso-3166-1"
+  },
   "keywords": [
     "iso-3166",
     "ISO 3166-1",
@@ -26,6 +30,10 @@
     "url": "http://danieleckermann.com"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecrmnn/iso-3166-1/issues"
+  },
+  "homepage": "https://github.com/ecrmnn/iso-3166-1",
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
