@@ -1,0 +1,33 @@
+{
+  "name": "iso-3166-1",
+  "version": "1.0.0",
+  "description": "Lookup information with ISO 3166-1 alpha-2, ISO 3166-1 alpha-3 and ISO 3166-1 numeric",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha tests/tests.js"
+  },
+  "keywords": [
+    "iso-3166",
+    "ISO 3166-1",
+    "ISO 3166-1 alpha-2",
+    "ISO 3166-1 alpha-3",
+    "ISO 3166-1 numeric",
+    "alpha-2",
+    "alpha-3",
+    "ISO",
+    "lookup",
+    "country",
+    "countries",
+    "geo"
+  ],
+  "author": {
+    "name": "Daniel Eckermann",
+    "email": "danieleckermann@gmail.com",
+    "url": "http://danieleckermann.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
