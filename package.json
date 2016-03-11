@@ -2,7 +2,7 @@
   "name": "iso-3166-1",
   "version": "1.0.0",
   "description": "Lookup information with ISO 3166-1 alpha-2, ISO 3166-1 alpha-3 and ISO 3166-1 numeric",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha tests/tests.js"
   },
