@@ -57,7 +57,7 @@ console.log(iso.whereNumeric(578));
 */
 ```
 
-Get values  by country name
+Get country by country name
 ```javascript
 const iso = require('iso-3166-1');
 

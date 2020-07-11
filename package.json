@@ -2,9 +2,11 @@
   "name": "iso-3166-1",
   "version": "1.1.0",
   "description": "Lookup information with ISO 3166-1 alpha-2, ISO 3166-1 alpha-3 and ISO 3166-1 numeric",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "node_modules/.bin/mocha tests/tests.js"
+    "test": "node_modules/.bin/mocha tests/tests.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,16 @@
   "homepage": "https://github.com/ecrmnn/iso-3166-1",
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run build && git add .",
+      "pre-push": "npm test"
+    }
   }
 }

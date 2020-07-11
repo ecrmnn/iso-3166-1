@@ -1,6 +1,5 @@
-const chai = require('chai');
 const expect = require('chai').expect;
-const iso = require('../src/');
+const iso = require('../dist/');
 
 describe('ISO-3166 test suite', function () {
   it('returns a country by alpha-2 with lowercase letters', function () {
@@ -15,7 +14,10 @@ describe('ISO-3166 test suite', function () {
   it('returns a country by alpha-2 with uppercase letters', function () {
     const deepObject = iso.whereAlpha2('BA');
 
-    expect(deepObject).to.have.deep.property('country', 'Bosnia and Herzegovina');
+    expect(deepObject).to.have.deep.property(
+      'country',
+      'Bosnia and Herzegovina'
+    );
     expect(deepObject).to.have.deep.property('alpha2', 'BA');
     expect(deepObject).to.have.deep.property('alpha3', 'BIH');
     expect(deepObject).to.have.deep.property('numeric', '070');
@@ -40,9 +42,14 @@ describe('ISO-3166 test suite', function () {
   });
 
   it('returns a country by country name with uppercase letters', function () {
-    const deepObject = iso.whereCountry('Democratic People\'s Republic of Korea');
+    const deepObject = iso.whereCountry(
+      "Democratic People's Republic of Korea"
+    );
 
-    expect(deepObject).to.have.deep.property('country', 'Democratic People\'s Republic of Korea');
+    expect(deepObject).to.have.deep.property(
+      'country',
+      "Democratic People's Republic of Korea"
+    );
     expect(deepObject).to.have.deep.property('alpha2', 'KP');
     expect(deepObject).to.have.deep.property('alpha3', 'PRK');
     expect(deepObject).to.have.deep.property('numeric', '408');
