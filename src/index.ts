@@ -1,4 +1,4 @@
-import iso, { Country } from './iso-3166.js';
+import iso, { Country } from './iso-3166';
 
 /**
  * Get country by country name
@@ -7,9 +7,7 @@ import iso, { Country } from './iso-3166.js';
  * @returns {Country | undefined}
  */
 export const whereCountry = (name: string): Country | undefined => {
-  name = name.toUpperCase();
-
-  return iso.find((country) => country.country.toUpperCase() === name);
+  return iso.find((country) => country.country.toUpperCase() === name.toUpperCase());
 };
 
 /**
@@ -19,9 +17,7 @@ export const whereCountry = (name: string): Country | undefined => {
  * @returns {Country | undefined}
  */
 export const whereAlpha2 = (alpha2: string): Country | undefined => {
-  alpha2 = alpha2.toUpperCase();
-
-  return iso.find((country) => country.alpha2 === alpha2);
+  return iso.find((country) => country.alpha2 === alpha2.toUpperCase());
 };
 
 /**
@@ -31,19 +27,22 @@ export const whereAlpha2 = (alpha2: string): Country | undefined => {
  * @returns {Country | undefined}
  */
 export const whereAlpha3 = (alpha3: string): Country | undefined => {
-  alpha3 = alpha3.toUpperCase();
-
-  return iso.find((country) => country.alpha3 === alpha3);
+  return iso.find((country) => country.alpha3 === alpha3.toUpperCase());
 };
 
 /**
  * Get country by ISO 3166-1 Numeric
  *
- * @param {string} numeric
+ * @param {string | number} numeric
  * @returns {Country | undefined}
  */
-export const whereNumeric = (numeric: string): Country | undefined => {
-  numeric = numeric.toString();
+export const whereNumeric = (numeric: string | number): Country | undefined => {
+  return iso.find((country) => country.numeric === String(numeric));
+};
 
-  return iso.find((country) => country.numeric === numeric);
+export default {
+  whereCountry,
+  whereAlpha2,
+  whereAlpha3,
+  whereNumeric,
 };

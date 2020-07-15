@@ -1,5 +1,6 @@
-const expect = require('chai').expect;
-const iso = require('../dist/');
+import { describe, it } from 'mocha';
+import { expect } from 'chai';
+import iso from '../src/';
 
 describe('ISO-3166 test suite', function () {
   it('returns a country by alpha-2 with lowercase letters', function () {

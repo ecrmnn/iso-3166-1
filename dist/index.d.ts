@@ -1,4 +1,4 @@
-import { Country } from './iso-3166.js';
+import { Country } from './iso-3166';
 /**
  * Get country by country name
  *
@@ -23,7 +23,14 @@ export declare const whereAlpha3: (alpha3: string) => Country | undefined;
 /**
  * Get country by ISO 3166-1 Numeric
  *
- * @param {string} numeric
+ * @param {string | number} numeric
  * @returns {Country | undefined}
  */
-export declare const whereNumeric: (numeric: string) => Country | undefined;
+export declare const whereNumeric: (numeric: string | number) => Country | undefined;
+declare const _default: {
+    whereCountry: (name: string) => Country | undefined;
+    whereAlpha2: (alpha2: string) => Country | undefined;
+    whereAlpha3: (alpha3: string) => Country | undefined;
+    whereNumeric: (numeric: string | number) => Country | undefined;
+};
+export default _default;

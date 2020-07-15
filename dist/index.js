@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.whereNumeric = exports.whereAlpha3 = exports.whereAlpha2 = exports.whereCountry = void 0;
-const iso_3166_js_1 = __importDefault(require("./iso-3166.js"));
+const iso_3166_1 = __importDefault(require("./iso-3166"));
 /**
  * Get country by country name
  *
@@ -12,8 +12,7 @@ const iso_3166_js_1 = __importDefault(require("./iso-3166.js"));
  * @returns {Country | undefined}
  */
 exports.whereCountry = (name) => {
-    name = name.toUpperCase();
-    return iso_3166_js_1.default.find((country) => country.country.toUpperCase() === name);
+    return iso_3166_1.default.find((country) => country.country.toUpperCase() === name.toUpperCase());
 };
 /**
  * Get country by ISO 3166-1 Alpha-2
@@ -22,8 +21,7 @@ exports.whereCountry = (name) => {
  * @returns {Country | undefined}
  */
 exports.whereAlpha2 = (alpha2) => {
-    alpha2 = alpha2.toUpperCase();
-    return iso_3166_js_1.default.find((country) => country.alpha2 === alpha2);
+    return iso_3166_1.default.find((country) => country.alpha2 === alpha2.toUpperCase());
 };
 /**
  * Get country by ISO 3166-1 Alpha-3
@@ -32,16 +30,20 @@ exports.whereAlpha2 = (alpha2) => {
  * @returns {Country | undefined}
  */
 exports.whereAlpha3 = (alpha3) => {
-    alpha3 = alpha3.toUpperCase();
-    return iso_3166_js_1.default.find((country) => country.alpha3 === alpha3);
+    return iso_3166_1.default.find((country) => country.alpha3 === alpha3.toUpperCase());
 };
 /**
  * Get country by ISO 3166-1 Numeric
  *
- * @param {string} numeric
+ * @param {string | number} numeric
  * @returns {Country | undefined}
  */
 exports.whereNumeric = (numeric) => {
-    numeric = numeric.toString();
-    return iso_3166_js_1.default.find((country) => country.numeric === numeric);
+    return iso_3166_1.default.find((country) => country.numeric === String(numeric));
+};
+exports.default = {
+    whereCountry: exports.whereCountry,
+    whereAlpha2: exports.whereAlpha2,
+    whereAlpha3: exports.whereAlpha3,
+    whereNumeric: exports.whereNumeric,
 };
