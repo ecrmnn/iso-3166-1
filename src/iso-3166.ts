@@ -721,6 +721,12 @@ const countries: Country[] = [
     numeric: '410',
   },
   {
+    country: "Republic of Kosovo",
+    alpha2: "XK",
+    alpha3: "XKX",
+    numeric: "926"
+  },
+  {
     country: 'Kuwait',
     alpha2: 'KW',
     alpha3: 'KWT',
