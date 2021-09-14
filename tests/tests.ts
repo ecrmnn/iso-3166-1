@@ -1,8 +1,14 @@
-import { describe, it } from 'mocha';
 import { expect } from 'chai';
+import { describe, it } from 'mocha';
+
 import iso from '../src/';
+import countries from '../src/iso-3166';
 
 describe('ISO-3166 test suite', function () {
+  it('returns an array of all countries', function() {
+    expect(iso.all()).to.be.equal(countries);
+  });
+
   it('returns a country by alpha-2 with lowercase letters', function () {
     const deepObject = iso.whereAlpha2('no');
 

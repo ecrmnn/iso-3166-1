@@ -40,7 +40,15 @@ export const whereNumeric = (numeric: string | number): Country | undefined => {
   return iso.find((country) => country.numeric === String(numeric));
 };
 
+/**
+ * Get all countries.
+ * 
+ * @returns {Array<Country>}
+ */
+export const all = (): Country[] => iso;
+
 export default {
+  all,
   whereCountry,
   whereAlpha2,
   whereAlpha3,
