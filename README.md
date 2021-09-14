@@ -72,5 +72,22 @@ console.log(iso.whereCountry('NORWAY'));
 */
 ```
 
+Get all countries
+```javascript
+const iso = require('iso-3166-1');
+
+console.log(iso.all());
+/** Returns:
+  [
+    {
+      country: 'Norway',
+      alpha2: 'NO',
+      alpha3: 'NOR',
+      numeric: '578'
+    }
+  ]
+*/
+```
+
 ### License
 MIT © [Daniel Eckermann](http://danieleckermann.com)
