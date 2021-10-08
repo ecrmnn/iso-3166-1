@@ -1465,7 +1465,7 @@ const countries: Country[] = [
     numeric: '092',
   },
   {
-    country: 'Virgin Islands',
+    country: 'Virgin Islands of the United States',
     alpha2: 'VI',
     alpha3: 'VIR',
     numeric: '850',
