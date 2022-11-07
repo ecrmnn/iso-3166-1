@@ -1369,7 +1369,7 @@ const countries: Country[] = [
     numeric: '788',
   },
   {
-    country: 'Turkey',
+    country: 'Türkiye',
     alpha2: 'TR',
     alpha3: 'TUR',
     numeric: '792',
