@@ -1285,7 +1285,7 @@ const countries: Country[] = [
     numeric: '744',
   },
   {
-    country: 'Swaziland',
+    country: 'Eswatini',
     alpha2: 'SZ',
     alpha3: 'SWZ',
     numeric: '748',
