@@ -793,7 +793,7 @@ const countries: Country[] = [
     numeric: '446',
   },
   {
-    country: 'Macedonia',
+    country: 'North Macedonia',
     alpha2: 'MK',
     alpha3: 'MKD',
     numeric: '807',
@@ -1285,7 +1285,7 @@ const countries: Country[] = [
     numeric: '744',
   },
   {
-    country: 'Swaziland',
+    country: 'Eswatini',
     alpha2: 'SZ',
     alpha3: 'SWZ',
     numeric: '748',
@@ -1369,7 +1369,7 @@ const countries: Country[] = [
     numeric: '788',
   },
   {
-    country: 'Turkey',
+    country: 'Türkiye',
     alpha2: 'TR',
     alpha3: 'TUR',
     numeric: '792',
