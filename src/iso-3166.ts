@@ -793,7 +793,7 @@ const countries: Country[] = [
     numeric: '446',
   },
   {
-    country: 'Macedonia',
+    country: 'North Macedonia',
     alpha2: 'MK',
     alpha3: 'MKD',
     numeric: '807',
